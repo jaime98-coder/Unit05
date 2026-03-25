@@ -5,9 +5,8 @@ public class Hora {
 	protected int minuto;
 
 	public Hora(int hora, int minuto) {
-		super();
-		this.hora = hora;
-		this.minuto = minuto;
+		setHora(minuto);
+		setMinuto(minuto);
 	}
 
 	/**
@@ -48,7 +47,11 @@ public class Hora {
 	public void inc() {
 		if (minuto == 59) {
 			minuto = 0;
-			this.hora++;
+			if (hora == 23) {
+				hora = 0;
+			} else {
+				this.hora++;
+			}
 		} else {
 			this.minuto++;
 		}
@@ -56,7 +59,17 @@ public class Hora {
 
 	@Override
 	public String toString() {
-		return hora + ":" + minuto;
+		return String.format("%02d:%02d", this.hora, this.minuto);
 	}
+	
+	
+	// Getters para que las clases hijas puedan leer los valores si los necesitan
+	public int getHora() {
+        return this.hora;
+    }
+    
+    public int getMinuto() {
+        return this.minuto;
+    }
 
 }
