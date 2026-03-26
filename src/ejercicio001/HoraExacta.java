@@ -25,9 +25,9 @@ public class HoraExacta extends Hora {
 	 */
 	public HoraExacta(int hora, int minuto, int segundo) {
 		super(hora, minuto);
-		setHora(hora);
-		setMinuto(minuto);
-		setSegundo(segundo);
+		if (!setSegundo(segundo)) {
+			this.segundo = 0;
+		}
 	}
 
 	/**
@@ -61,7 +61,8 @@ public class HoraExacta extends Hora {
 
 	@Override
 	public String toString() {
-		return hora + ":" + minuto + ":" + segundo;
+		// Concatenamos el toString perfecto del padre con nuestros segundos formateados
+		return super.toString() + String.format(":%02d", this.segundo);
 	}
 
 }

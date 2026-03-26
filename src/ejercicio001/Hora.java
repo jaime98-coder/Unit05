@@ -5,8 +5,12 @@ public class Hora {
 	protected int minuto;
 
 	public Hora(int hora, int minuto) {
-		setHora(minuto);
-		setMinuto(minuto);
+		if (!setHora(hora)) {
+			this.hora = 0;
+		}
+		if (!setMinuto(minuto)) {
+			this.minuto	 = 0;
+		}
 	}
 
 	/**
@@ -61,15 +65,14 @@ public class Hora {
 	public String toString() {
 		return String.format("%02d:%02d", this.hora, this.minuto);
 	}
-	
-	
+
 	// Getters para que las clases hijas puedan leer los valores si los necesitan
 	public int getHora() {
-        return this.hora;
-    }
-    
-    public int getMinuto() {
-        return this.minuto;
-    }
+		return this.hora;
+	}
+
+	public int getMinuto() {
+		return this.minuto;
+	}
 
 }
