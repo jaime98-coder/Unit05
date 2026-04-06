@@ -1,4 +1,4 @@
-package ejercicio005;
+package ejercicio004;
 
 class Lavadora extends Electrodomestico {
 	private double carga;

@@ -1,4 +1,4 @@
-package ejercicio005;
+package ejercicio004;
 
 public class Electrodomestico {
 	protected double precioBase;
