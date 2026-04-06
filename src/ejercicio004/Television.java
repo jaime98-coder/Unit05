@@ -39,12 +39,9 @@ class Television extends Electrodomestico {
 	}
 
 	public boolean setSintonizadorTDT(boolean sintonizadorTDT) {
-		boolean sintonizaTDT = false;
-		if (sintonizadorTDT) {
-			this.sintonizadorTDT = sintonizadorTDT;
-			sintonizaTDT = true;
-		}
-		return sintonizaTDT;
+		// Ambos estados (true o false) son opciones de compra válidas.
+				this.sintonizadorTDT = sintonizadorTDT;
+				return true;
 	}
 
 	/**
