@@ -19,10 +19,14 @@ public class Triangulo extends Poligono {
 
 	}
 
-// Pdte poner constructor vacio
-//	public Triangulo() {
-//
-//	}
+	// Constructor SIN parámetros (vacío) que exige el enunciado 
+    public Triangulo() {
+        super(3); // Un triángulo siempre tiene 3 lados, aunque esté vacío
+        // Por defecto el tamaño de los lados es 1 
+        this.lado1 = 1;
+        this.lado2 = 1;
+        this.lado3 = 1;
+    }
 
 	public double getLado1() {
 		return lado1;
@@ -68,8 +72,7 @@ public class Triangulo extends Poligono {
 
 	@Override
 	public String toString() {
-		return "Triángulo - Lado 1: " + lado1 + ", Lado 2:" + lado2 + ", Lado 3: " + lado3 + "\nArea del triángulo: "
-				+ area();
+		return "Triángulo - Lado 1: " + lado1 + ", Lado 2:" + lado2 + ", Lado 3: " + lado3 ;
 	}
 
 	/*

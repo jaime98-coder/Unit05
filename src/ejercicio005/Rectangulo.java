@@ -15,10 +15,12 @@ public class Rectangulo extends Poligono {
 
 	}
 
-// Pdte poner constructor vacio
-//	public Rectangulo() {
-//
-//	}
+	// Constructor SIN parámetros (vacío) que exige el enunciado
+	public Rectangulo() {
+		super(4);
+		this.lado1 = 1;
+		this.lado2 = 1;
+	}
 
 	public double getLado1() {
 		return lado1;
@@ -40,7 +42,7 @@ public class Rectangulo extends Poligono {
 
 	public boolean setLado2(double lado2) {
 		boolean esCorrecto = false;
-		if (lado1 > 0) {
+		if (lado2 > 0) {
 			this.lado2 = lado2;
 			esCorrecto = true;
 		}
@@ -50,7 +52,7 @@ public class Rectangulo extends Poligono {
 
 	@Override
 	public String toString() {
-		return "Rectangulo - Lado 1: " + lado1 + ", Lado 2:" + lado2;
+		return "Rectangulo - Lado 1: " + lado1 + ", Lado 2: " + lado2;
 	}
 
 	@Override
