@@ -1,4 +1,4 @@
-package ejercicioInterfaces003;
+package ejerciciointerfaces003;
 
 public abstract class AnimalDomestico implements Vivir {
 	protected String nombre;

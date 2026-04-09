@@ -1,4 +1,4 @@
-package ejercicioInterfaces003;
+package ejerciciointerfaces003;
 
 public class Gato extends AnimalDomestico {
 	private static final double PROBABILIDAD_OBEDIENCIA = 0.05;

@@ -1,4 +1,4 @@
-package ejercicioInterfaces003;
+package ejerciciointerfaces003;
 
 interface Vivir {
 
