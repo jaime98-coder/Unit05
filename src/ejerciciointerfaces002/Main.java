@@ -15,24 +15,31 @@ public class Main {
 		Futbolista[] arrayFutbolistas = { futbolista1, futbolista2, futbolista3, futbolista4, futbolista5 };
 
 		System.out.println("------SIN ORDENAR------");
-		for (Futbolista futbolista : arrayFutbolistas) {
-			System.out.println(futbolista.toString());
-		}
+		imprimirArray(arrayFutbolistas);
 
 		Arrays.sort(arrayFutbolistas);
 
 		System.out.println("------ORDENADO------");
+		imprimirArray(arrayFutbolistas);
+
+		System.out.println("------COMPROBACIÓN DE IDENTIDAD------ ");
+		comprobarIdentidad(futbolista4, futbolista5);
+
+	}
+
+	public static void comprobarIdentidad(Futbolista futbolistaA, Futbolista futbolistaB) {
+		if (futbolistaA.equals(futbolistaB)) {
+			System.out.println("Alerta: Futbolista duplicado");
+		} else {
+			System.out.println("El futbolista " + futbolistaA.getNombre() + " y el futbolista " + futbolistaB.getNombre()
+					+ " comparten número");
+		}
+	}
+
+	private static void imprimirArray(Futbolista[] arrayFutbolistas) {
 		for (Futbolista futbolista : arrayFutbolistas) {
 			System.out.println(futbolista.toString());
 		}
-
-		System.out.println("------COMPROBACIÓN DE IDENTIDAD------ ");
-		if (futbolista4.equals(futbolista5)) {
-			System.out.println("Alerta: Futbolista duplicado");
-		} else {
-			System.out.println("El futbolista 4 y 5 comparten número");
-		}
-
 	}
 
 }
