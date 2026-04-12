@@ -1,0 +1,80 @@
+------------------------------------------------------------------
+<< abstract >> Vehiculo
+------------------------------------------------------------------
+# marca : String
+# modelo: String
+# color: String
+# matricula: String
+# motorEncendido: boolean
+# marchaActual: int
+# velocidadActual: int
+------------------------------------------------------------------
+Vehiculo(marca, modelo, color, matricula)
++ GETTERS & SETTERS
+
++ parar(): void
++ arrancar(): void
++ subirMarcha(): void
++ bajarMarcha(): void
++ acelerar(velocidadObjetivo : int): void
++ frenarHastaParar() : void
+
++ equals(Object): boolean
++ toString(): String 
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+Turismo extends Vehiculo
+------------------------------------------------------------------
+- numeroPlazas: int
+- tipoUso: String
+------------------------------------------------------------------
+Turismo(marca,modelo,color,matricula,numeroPlazas,tipoUso)
++ GETTERS & SETTERS
++ equals(Object)
++ toString(): String 
+------------------------------------------------------------------
+Hereda: 
++ parar()
++ arrancar()
++ subirMarcha()
++ bajarMarcha()
++ acelerar(velocidadObjetivo : int): void
++ frenarHastaParar() : void
+------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+Camion extends Vehiculo
+------------------------------------------------------------------
+- pesoMaximoAutorizado: double
+- transportaMercanciaPeligrosa: boolean
+------------------------------------------------------------------
+Hereda: 
++ parar()
++ arrancar()
++ subirMarcha()
++ bajarMarcha()
++ acelerar(velocidadObjetivo : int): void
++ frenarHastaParar() : void
+
+
+
+------------------------------------------------------------------
+Motocicleta extends Vehiculo
+---------------------------------
+- cilindrada: int
+---------------------------------
+Motocicleta (marca,modelo,color,matricula,cilindrada)
++ GETTERS & SETTERS
++ necesitaCarnet(): boolean
++ equals(Object)
++ toString(): String 
+---------------------------------
+Hereda: 
++ parar()
++ arrancar()
++ subirMarcha()
++ bajarMarcha()
++ acelerar(velocidadObjetivo : int): void
++ frenarHastaParar() : void

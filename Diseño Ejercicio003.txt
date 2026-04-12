@@ -1,0 +1,88 @@
+------------------------------------------------------------------
+Titular
+------------------------------------------------------------------
+- dni: String
+- nombre: String
+- apellidos: String
+- telefono: String
+------------------------------------------------------------------
++ Titular (dni, nombre, apellidos, telefono)
++ GETTERS Y SETTERS
++ toString(): String
+
+
+------------------------------------------------------------------
+<<abstract>> CuentaBancaria
+------------------------------------------------------------------
+# numeroCuenta: String
+# saldo: double
+# titulares: Titular[] // Array con tamaño máximo de 3
+# numeroTitulares: int
+------------------------------------------------------------------
++ CuentaBancaria (numeroCuenta,saldo, primerTitular: Titular)
++ GETTERS Y SETTERS
++ ingresarDinero(cantidad: double): boolean
++ retirarDinero(cantidad: double): boolean
++ anadirTitular(nuevoTitular: Titular): boolean
++ borrarTitular(dniABorrar: String): boolean
++ toString(): String
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+CuentaAhorro extends CuentaBancaria
+------------------------------------------------------------------
+- cuotaMantenimiento: double
+- interesAnual: double
+------------------------------------------------------------------
++ CuentaAhorro (numeroCuenta, saldo, primerTitular, cuotaMantenimiento, interesAnuall)
++ GETTERS Y SETTERS
++ aplicarInteresAnual(): void
++ cobrarMantenimiento(): boolean // BOoleano por si la cuota se queda en negativo
++ toString(): String
+------------------------------------------------------------------
+Hereda:
++ ingresarDinero(cantidad: double): boolean
++ retirarDinero(cantidad: double): boolean
++ añadirTitular(String nuevoTitular): boolean
++ borrarTitular(String titularABorrar): boolean
++ toString(): String
+
+
+
+
+------------------------------------------------------------------
+CuentaCorriente extends CuentaBancaria
+------------------------------------------------------------------
+- porcentajeCobrado: double
+- transacciones: Transaccion[] // Historial de movimiento
+- numeroTransacciones: int
+------------------------------------------------------------------
++ CuentaCorriente (numeroCuenta, saldoInicial, primerTitular, porcentaje)
++ GETTERS Y SETTERS
++ registrarTransaccion(nuevaTransaccion: Transaccion): boolean
++ toString(): String
+------------------------------------------------------------------
+Hereda:
++ ingresarDinero(cantidad: double): boolean
++ retirarDinero(cantidad: double): boolean
++ añadirTitular(String nuevoTitular): boolean
++ borrarTitular(String titularABorrar): boolean
+
+
+
+------------------------------------------------------------------
+Transaccion
+------------------------------------------------------------------
+- dia: int
+- mes: int
+- anio: int
+- concepto: String
+- importe: double
+------------------------------------------------------------------
++ Transaccion (dia, mes, anio, concepto, importe)
++ GETTERS Y SETTERS
++ toString(): String
+
+
