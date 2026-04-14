@@ -16,11 +16,12 @@ Titular
 ------------------------------------------------------------------
 # numeroCuenta: String
 # saldo: double
-# titulares: Titular[] // Array con tamaño máximo de 3
-# numeroTitulares: int
+# titulares: List<Titular>
+# MAX_TITULARES: int = 3 (static)
 ------------------------------------------------------------------
 + CuentaBancaria (numeroCuenta,saldo, primerTitular: Titular)
-+ GETTERS Y SETTERS
++ GETTERS Y SETTERS:
+(getSaldo / getNumeroCuenta / getTitulares)
 + ingresarDinero(cantidad: double): boolean
 + retirarDinero(cantidad: double): boolean
 + anadirTitular(nuevoTitular: Titular): boolean
