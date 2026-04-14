@@ -1,0 +1,58 @@
+------------------------------------------------------------------
+<<abstract>> Contacto
+------------------------------------------------------------------
+# nombre: String
+# telefono: String
+------------------------------------------------------------------
+Contacto (nombre, telefono)
++ GETTERS Y SETTERS
++ anadirContacto(nombre, telefono): boolean
++ eliminarContacto(nombre, telefono): boolean
++ toString(): String
++ equals(Object): boolean
+------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+Personal extends Contacto
+------------------------------------------------------------------
+- cumpleanos: String
+------------------------------------------------------------------
++ Personal (nombre, telefono, cumpleanos)
++ GETTERS Y SETTERS
++ toString(): String
+------------------------------------------------------------------
+Heredan:
++ anadirContacto(nombre, telefono): boolean
++ eliminarContacto(nombre, telefono): boolean
++ equals(Object): boolean
+
+
+------------------------------------------------------------------
+Empresa extends Contacto
+------------------------------------------------------------------
+- paginaWeb: String
+------------------------------------------------------------------
++ Empresa (nombre, telefono, paginaWeb)
++ GETTERS Y SETTERS
++ toString(): String
+------------------------------------------------------------------
+Heredan:
++ anadirContacto(nombre, telefono): boolean
++ eliminarContacto(nombre, telefono): boolean
++ equals(Object): boolean
+
+
+------------------------------------------------------------------
+LO QUE GESTIONA LOS CONTACTOS
+------------------------------------------------------------------
+Agenda
+------------------------------------------------------------------
+- listaContactos: ArrayList<Contacto>
+------------------------------------------------------------------
++ Agenda() // Constructor vacío PERO QUE INSTANCIA EL ArrayList
++ anadirContacto(nuevoContacto: Contacto): Boolean
++ eliminarContacto(contactoABorrar: Contacto) : Boolean
++ getCantidadContactos(): int
+------------------------------------------------------------------
+
